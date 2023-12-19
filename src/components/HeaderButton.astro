@@ -1,0 +1,21 @@
+---
+interface Props {
+
+	href: string;
+
+}
+
+
+
+const { href } = Astro.props;
+---
+<a href={href} class="cursor-pointer rounded w-auto p-3 hover:scale-110 hover:color hover:transition my-1 bg-blue-950 mx-3">
+    <slot/>
+</a>
+
+<style is:global>
+a {
+  transition-duration: 0.5s;
+  scroll-behavior: smooth;
+}
+</style>
